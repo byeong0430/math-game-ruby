@@ -10,13 +10,10 @@ class Question
   end
 
   def add_numbers
-    # add the two numbers and push number1, number2, and the sum result to initial `number` hash
+    # add the two numbers and push number1, number2,
+    # and the sum result to initial `number` hash
     numbers = generate_2_random_number
     answer = numbers.inject(0, :+)
-    
-    @number[:number1] = numbers[0]
-    @number[:number2] = numbers[1]
-    @number[:answer] = answer
-    puts @number
+    @number.merge!(number1: numbers[0], number2: numbers[1], answer: answer)
   end
 end
