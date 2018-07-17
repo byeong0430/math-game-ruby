@@ -70,6 +70,8 @@ class Game
 
     # if any player's life is zero, announce the winner and end the game
     # otherwise, next turn!
-    (@player1.life.zero? || @player2.life.zero?) ? announce_winner : (puts '----- NEW TURN -----')
+    @player1.life.zero? || @player2.life.zero? ?
+    announce_winner :
+    (puts '----- NEW TURN -----')
   end
 end
